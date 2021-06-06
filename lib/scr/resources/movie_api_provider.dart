@@ -10,7 +10,7 @@ class MovieApiProvider {
   Future<ItemModel> fetchMovieList() async {
     print("entered");
     final response = await client
-        .get("http://api.themoviedb.org/3/movie/popular?api_key=$_apiKey");
+        .get("https://api.themoviedb.org/3/movie/popular?api_key=$_apiKey");
     print(response.body.toString());
     if (response.statusCode == 200) {
       return ItemModel.fromJson(json.decode(response.body));
@@ -22,7 +22,7 @@ class MovieApiProvider {
   Future<ItemModel> fetchMovieListUpComing() async {
     print("entered");
     final response = await client
-        .get("http://api.themoviedb.org/3/movie/upcoming?api_key=$_apiKey");
+        .get("https://api.themoviedb.org/3/movie/upcoming?api_key=$_apiKey");
     print(response.body.toString());
     if (response.statusCode == 200) {
       return ItemModel.fromJson(json.decode(response.body));

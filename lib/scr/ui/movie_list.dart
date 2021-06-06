@@ -20,13 +20,6 @@ class MovieListState extends State<MovieList> {
     super.initState();
     data=='top rated'?bloc.fetchAllMovies():bloc.fetchAllMoviesUpComing();
   }
-
-  @override
-  void dispose() {
-    bloc.dispose();
-    super.dispose();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
