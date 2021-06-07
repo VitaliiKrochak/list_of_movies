@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class MovieDetail extends StatefulWidget {
+class MovieDetail extends StatelessWidget {
   final posterUrl;
   final description;
   final releaseDate;
@@ -16,37 +16,7 @@ class MovieDetail extends StatefulWidget {
     this.voteAverage,
     this.movieId,
   });
-
-  @override
-  State<StatefulWidget> createState() {
-    return MovieDetailState(
-      title: title,
-      posterUrl: posterUrl,
-      description: description,
-      releaseDate: releaseDate,
-      voteAverage: voteAverage,
-      movieId: movieId,
-    );
-  }
-}
-
-class MovieDetailState extends State<MovieDetail> {
-  final posterUrl;
-  final description;
-  final releaseDate;
-  final String title;
-  final String voteAverage;
-  final int movieId;
-
-  MovieDetailState({
-    this.title,
-    this.posterUrl,
-    this.description,
-    this.releaseDate,
-    this.voteAverage,
-    this.movieId,
-  });
-
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
